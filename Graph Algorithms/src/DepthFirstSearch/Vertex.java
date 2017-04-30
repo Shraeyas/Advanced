@@ -51,4 +51,5 @@ public class Vertex
     {
         this.nbr.add(vertex);
     }
+
 }

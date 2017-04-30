@@ -27,7 +27,19 @@ public class Driver
         pg.add(v4);
         pg.add(v5);
         
+        System.out.println("DFS Iterative ");
         Dfs_ite p_g = new Dfs_ite();
         p_g.dfs(pg);
+        
+        
+        v1.setVisited(false);
+        v2.setVisited(false);
+        v3.setVisited(false);
+        v4.setVisited(false);
+        v5.setVisited(false);
+        
+        System.out.println("DFS Recursive ");
+        Dfs_rec prac = new Dfs_rec();
+        prac.dfs(pg);
     }
 }

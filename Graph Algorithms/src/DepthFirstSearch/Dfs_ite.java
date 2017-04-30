@@ -9,8 +9,6 @@ public class Dfs_ite
 {
     private Stack<Vertex> stk;
     
-    
-    
     public Dfs_ite()
     {
         this.stk = new Stack<>();

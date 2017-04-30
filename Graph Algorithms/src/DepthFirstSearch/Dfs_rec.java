@@ -1,14 +1,33 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package DepthFirstSearch;
 
-/**
- *
- * @author Shraeyas
- */
-public class Dfs_rec {
+import java.util.List;
+
+public class Dfs_rec 
+{
+    public void dfs(List <Vertex> list)
+    {
+        for(Vertex v : list)
+        {
+            if(!v.isVisited())
+            {
+                v.setVisited(true);
+                System.out.println(v.name + " ");
+                dfs(v);
+            }
+        }
+    }
     
+    private void dfs(Vertex v)
+    {
+        for(Vertex ver : v.getNbr())
+        {
+            if(!ver.isVisited())
+            {
+                System.out.println(ver.name + " ");
+                ver.setVisited(true);
+                dfs(ver);
+            }
+        }
+    }
 }
